@@ -1,0 +1,45 @@
+$tablet: 769px !default
+// 960px container + 40px
+$desktop: 1000px !default
+// 1152px container + 40
+$widescreen: 1192px !default
+
+=from($device)
+  @media screen and (min-width: $device)
+    @content
+
+=until($device)
+  @media screen and (max-width: $device - 1px)
+    @content
+
+=mobile
+  @media screen and (max-width: $tablet - 1px)
+    @content
+
+=mobile-only
+  @media screen and (min-width: 320px) and (max-width: 578px)
+    @content
+
+=tablet
+  @media screen and (min-width: $tablet)
+    @content
+
+=tablet-only
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px)
+    @content
+
+=touch
+  @media screen and (max-width: $desktop - 1px)
+    @content
+
+=desktop
+  @media screen and (min-width: $desktop)
+    @content
+
+=desktop-only
+    @media screen and (min-width: $desktop) and (max-width: $widescreen - 1px)
+      @content
+
+=widescreen
+  @media screen and (min-width: $widescreen)
+    @content
