@@ -8,7 +8,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build:gh": "vue-cli-service build && mkdir -p docs && mv dist docs",
+    "build:gh": "vue-cli-service build && mkdir -p docs && mv dist/* docs",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
     "test:unit": "vue-cli-service test:unit",
