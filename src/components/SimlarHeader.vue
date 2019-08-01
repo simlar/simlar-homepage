@@ -6,24 +6,24 @@
 </template>
 
 <script lang="ts">
-  import { Component, Prop, Vue } from "vue-property-decorator";
-  import { IHeader } from "@/interfaces/IHeader";
+import { Component, Prop, Vue } from "vue-property-decorator";
+import { IHeader } from "@/interfaces/IHeader";
 
-  @Component
-  export default class SimlarHeader extends Vue {
-    @Prop() private header!: IHeader;
-  }
+@Component
+export default class SimlarHeader extends Vue {
+  @Prop() private header!: IHeader;
+}
 </script>
 
 <style scoped lang="scss">
-  #nav {
-    padding: 30px;
-    a {
-      font-weight: bold;
-      color: #2c3e50;
-      &.router-link-exact-active {
-        color: #42b983;
-      }
+#nav {
+  padding: 30px;
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+    &.router-link-exact-active {
+      color: #42b983;
     }
   }
+}
 </style>

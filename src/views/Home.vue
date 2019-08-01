@@ -2,10 +2,10 @@
   <div class="home">
     <simlar-hero-stage v-bind:heroStage="heroStage"></simlar-hero-stage>
     <simlar-info-box
-            class="simlar-info-box"
-            v-for="info in infos"
-            :key="info.id"
-            v-bind:infoBox="info"
+      class="simlar-info-box"
+      v-for="info in infos"
+      :key="info.id"
+      v-bind:infoBox="info"
     ></simlar-info-box>
   </div>
 </template>
