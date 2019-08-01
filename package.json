@@ -11,7 +11,7 @@
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
     "test:unit": "vue-cli-service test:unit",
-    "format:write": "prettier --write \"src/**/*.vue\" --parser html && prettier --write \"src/**/*.{ts,js}\" --parser typescript"
+    "format:write": "prettier --write \"src/**/*.vue\" --parser vue && prettier --write \"src/**/*.{ts,js}\" --parser typescript"
   },
   "dependencies": {
     "vue": "^2.6.10",

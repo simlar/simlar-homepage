@@ -35,7 +35,7 @@ export default class SimlarImage extends Vue {
     max-width: calc(70% - 48px);
   }
 
-  @media screen and (min-width: 999px){
+  @media screen and (min-width: 999px) {
     max-width: calc(75% - 64px);
   }
 }
