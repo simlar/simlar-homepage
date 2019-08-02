@@ -6,6 +6,7 @@
     "parser": "vue"
   },
   "scripts": {
+    "commit": "npx git-cz",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
@@ -26,6 +27,8 @@
     "@vue/cli-plugin-unit-jest": "^3.9.0",
     "@vue/cli-service": "^3.9.3",
     "@vue/test-utils": "1.0.0-beta.29",
+    "commitizen": "4.0.3",
+    "cz-conventional-changelog": "3.0.2",
     "lodash": "4.17.15",
     "node-sass": "^4.12.0",
     "prettier": "1.18.2",
@@ -33,6 +36,11 @@
     "ts-jest": "^24.0.2",
     "typescript": "^3.5.3",
     "vue-template-compiler": "^2.6.10"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "postcss": {
     "plugins": {
