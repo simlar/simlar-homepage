@@ -4,12 +4,13 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
+import { IImage } from "@/interfaces/image"
 
 @Component
 export default class SimlarImage extends Vue {
-  @Prop() private img!: { name: string; alt: string };
+  @Prop() private img!: IImage;
 
-  getImageUrl(name: string) {
+  public getImageUrl(name: string) {
     const image = require.context("../../assets/images/", false, /\.png$/);
     return image("./" + name);
   }

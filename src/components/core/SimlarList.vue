@@ -1,9 +1,11 @@
 <template>
   <div>
-    <div v-for="item in list">
-      <img :src="getIconUrl(item.icon)" :alt="item.icon_alt" />
-      <span>{{ item.title }}</span>
-    </div>
+    <ul v-for="li in list">
+      <li>
+        <img src="getIconUrl(li.icon)" alt="li.icon_alt" />
+        <span>{{ li.title }}</span>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -15,9 +17,9 @@ import { SimlarListItem } from "@/interfaces/stage-list";
 export default class SimlarList extends Vue {
   @Prop() private list!: SimlarListItem[];
 
-  getIconUrl(item: SimlarListItem) {
+  public getIconUrl(item: SimlarListItem) {
     const icon = require.context("../../assets/icons", false, /\.svg$/);
-    icon("./" + item.icon);
+    return icon("./" + item.icon);
   }
 }
 </script>

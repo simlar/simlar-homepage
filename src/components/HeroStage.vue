@@ -3,7 +3,7 @@
     <div class="hero-stage">
       <div class="hero-stage-content">
         <h3>{{ heroStage.headline }}</h3>
-        <simlar-list :list="heroStage.list"></simlar-list>
+        <simlar-list v-bind:list="heroStage.list"></simlar-list>
       </div>
       <div class="hero-stage-simlar-screenshot">
         <simlar-image v-bind:img="heroStage.img"></simlar-image>

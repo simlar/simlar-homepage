@@ -28,7 +28,11 @@ import Infobox from "@/components/Infobox.vue";
           name: "ringing.png",
           alt: "Simlar Ringing Screenshot"
         },
-        list: ["Android", "iPhone", "Source Code"]
+        list: [
+          { icon: "", icon_alt: "", title: "Android" },
+          { icon: "", icon_alt: "", title: "iPhone" },
+          { icon: "", icon_alt: "", title: "Source Code" }
+        ]
       },
       infos: [
         {
