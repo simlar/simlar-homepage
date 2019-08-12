@@ -11,9 +11,7 @@ export default class SimlarImage extends Vue {
   @Prop() private img!: IImage;
 
   public getAsset(name: string) {
-    const asset = name.endsWith(".svg") ? this.getIconUrl(name) : this.getImageUrl(name);
-    // remove hash from asset
-    return asset;
+    return name.endsWith(".svg") ? this.getIconUrl(name) : this.getImageUrl(name);
   }
 
   public getImageUrl(name: string) {

@@ -4,7 +4,6 @@
       <a href="#">Simlar</a>
       <simlar-image class="header-logo" :img="header.logo"></simlar-image>
       <div class="router-links">
-        <router-link to="/">Home</router-link> |
         <router-link to="/">Support</router-link> |
         <router-link to="/">Developers</router-link> |
         <router-link to="/about">Impressum</router-link>
@@ -38,7 +37,9 @@ export default class SimlarHeader extends Vue {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
+  align-items: center;
   padding: 30px;
+  position: relative;
   a {
     font-weight: bold;
     color: #2c3e50;
@@ -50,21 +51,22 @@ export default class SimlarHeader extends Vue {
 
 .header-logo {
   width: 75px;
-  height: auto;
+  height: 75px;
 }
 
-  .vertical-divider {
-    display: flex;
-    flex-flow: row nowrap;
+.vertical-divider {
+  display: flex;
+  flex-flow: row nowrap;
+  position: absolute;
+  top: 85px;
 
-    hr {
-      display: inline-flex;
-      width: 95vw;
-    }
-
-    span {
-      width: 150px;
-    }
-
+  hr {
+    display: inline-flex;
+    width: 45vw;
   }
+
+  span {
+    width: 85px;
+  }
+}
 </style>
