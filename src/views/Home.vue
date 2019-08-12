@@ -1,12 +1,12 @@
 <template>
   <div class="home">
     <simlar-hero-stage v-bind:heroStage="heroStage"></simlar-hero-stage>
-    <simlar-info-box
+    <simlar-infobox
       class="simlar-info-box"
       v-for="info in infos"
       :key="info.id"
       v-bind:infoBox="info"
-    ></simlar-info-box>
+    ></simlar-infobox>
   </div>
 </template>
 
@@ -14,24 +14,38 @@
 import { Component, Vue } from "vue-property-decorator";
 import HeroStage from "@/components/HeroStage.vue";
 import Infobox from "@/components/Infobox.vue";
+import SimlarHeroStage from "@/components/HeroStage.vue";
+import SimlarInfobox from "@/components/Infobox.vue";
 
 @Component({
   components: {
-    "simlar-hero-stage": HeroStage,
-    "simlar-info-box": Infobox
+    SimlarHeroStage,
+    SimlarInfobox
   },
   data() {
     return {
       heroStage: {
         headline: "Einfach, verschlüsselt und kostenlos telefonieren",
         img: {
-          name: "ringing.png",
+          name: "ios-screenshot.png",
           alt: "Simlar Ringing Screenshot"
         },
         list: [
-          { icon: "", icon_alt: "", title: "Android" },
-          { icon: "", icon_alt: "", title: "iPhone" },
-          { icon: "", icon_alt: "", title: "Source Code" }
+          {
+            name: "ic_android.svg",
+            alt: "Android Source Code",
+            title: "Android"
+          },
+          {
+            name: "ic_apple.svg",
+            alt: "iPhone Source Code",
+            title: "iPhone"
+          },
+          {
+            name: "ic_apple.svg",
+            alt: "Source Code",
+            title: "Source Code"
+          }
         ]
       },
       infos: [
@@ -39,7 +53,8 @@ import Infobox from "@/components/Infobox.vue";
           id: 1,
           headline: "Höchste Sicherheit",
           text:
-            "Simlar benutzt das bewährte Verschlüsselungsprotokoll ZRTP. Deine Gesrpäche können nicht abgehört werden - auch nicht von uns."
+            "Simlar benutzt das bewährte Verschlüsselungsprotokoll ZRTP. Deine Gesrpäche können nicht " +
+            "abgehört werden - auch nicht von uns."
         },
         {
           id: 2,
@@ -51,7 +66,8 @@ import Infobox from "@/components/Infobox.vue";
           id: 3,
           headline: "",
           text:
-            "Wir sind ein kleines Team aus Köln, dass sich zum Ziel gesetzt hat, einfach und sicher und mehr text und so weiter und Infos evt. Fotos von uns."
+            "Wir sind ein kleines Team aus Köln, dass sich zum Ziel gesetzt hat, " +
+            "einfach und sicher und mehr text und so weiter und Infos evt. Fotos von uns."
         }
       ]
     };

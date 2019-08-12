@@ -1,5 +1,5 @@
-import { SimlarRoute } from "@/interfaces/route";
+import { IImage } from "@/interfaces/image";
+
 export interface IHeader {
-  logo: string;
-  routes: SimlarRoute[];
+  logo: IImage;
 }

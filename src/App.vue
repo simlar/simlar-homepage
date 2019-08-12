@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <SimlarHeader></SimlarHeader>
+    <SimlarHeader :header="header"></SimlarHeader>
     <router-view />
     <SimlarFooter></SimlarFooter>
   </div>
@@ -19,7 +19,10 @@ import SimlarFooter from "@/components/SimlarFooter.vue";
   data() {
     return {
       header: {
-        logo: "https://logo.png"
+        logo: {
+          name: "app-logo.svg",
+          alt: "Simlar Logo"
+        }
       }
     };
   }

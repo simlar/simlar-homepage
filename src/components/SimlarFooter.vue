@@ -2,9 +2,9 @@
   <footer class="footer">
     <div class="footer--column">
       <h3>Simlar empfehlen</h3>
-      <a href="/#">Auf Facebook empfehlen</a>
-      <a href="/#">Auf Twitter empfehlen</a>
-      <a href="/#">Auf Google+ :D empfehlen</a>
+      <a href="#">Auf Facebook empfehlen</a>
+      <a href="#">Auf Twitter empfehlen</a>
+      <a href="#">Auf Google+ :D empfehlen</a>
     </div>
     <div class="footer--column">
       <h3>Service &amp; Entwicklung</h3>

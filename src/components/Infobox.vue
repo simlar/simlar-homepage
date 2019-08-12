@@ -9,7 +9,7 @@
 import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
-export default class Infobox extends Vue {
+export default class SimlarInfobox extends Vue {
   @Prop() private infoBox!: { id: number; headline: string; text: string };
 }
 </script>
