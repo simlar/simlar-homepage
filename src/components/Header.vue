@@ -19,15 +19,15 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import { IHeader } from "@/interfaces/IHeader";
-import SimlarImage from "@/components/core/SimlarImage.vue";
+import { IHeader } from "@/interfaces/header";
+import Image from "@/components/core/Image.vue";
 
 @Component({
   components: {
-    SimlarImage
+    SimlarImage: Image
   }
 })
-export default class SimlarHeader extends Vue {
+export default class Header extends Vue {
   @Prop() private header!: IHeader;
 }
 </script>
@@ -50,23 +50,27 @@ export default class SimlarHeader extends Vue {
 }
 
 .header-logo {
-  width: 75px;
-  height: 75px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 20px;
+  right: calc(50% - 50px);
 }
 
 .vertical-divider {
   display: flex;
+  width: 100%;
   flex-flow: row nowrap;
   position: absolute;
   top: 85px;
 
   hr {
     display: inline-flex;
-    width: 45vw;
+    width: 100%;
   }
 
   span {
-    width: 85px;
+    width: 250px;
   }
 }
 </style>

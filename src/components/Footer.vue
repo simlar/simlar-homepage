@@ -31,7 +31,7 @@ import { Component, Vue, Prop } from "vue-property-decorator";
 import { Footer as IFooter } from "@/interfaces/footer";
 
 @Component
-export default class SimlarFooter extends Vue {
+export default class Footer extends Vue {
   @Prop() private footer!: IFooter;
 }
 </script>

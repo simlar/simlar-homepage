@@ -12,14 +12,14 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import { SimlarListItem } from "@/interfaces/stage-list";
-import SimlarImage from "@/components/core/SimlarImage.vue";
+import Image from "@/components/core/Image.vue";
 
 @Component({
   components: {
-    SimlarImage
+    SimlarImage: Image
   }
 })
-export default class SimlarList extends Vue {
+export default class List extends Vue {
   @Prop() private list!: SimlarListItem[];
 }
 </script>

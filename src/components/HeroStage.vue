@@ -1,11 +1,13 @@
 <template>
   <div>
     <div class="hero-stage">
-      <div class="hero-stage-content">
+      <div class="hero-stage--content">
         <h3>{{ heroStage.headline }}</h3>
-        <simlar-list :list="heroStage.list"></simlar-list>
+        <div v-if="heroStage.downloads" class="hero-stage--download-app">
+          <cta v-for="download in heroStage.downloads" :cta="download"></cta>
+        </div>
       </div>
-      <div class="hero-stage-simlar-screenshot">
+      <div class="hero-stage--simlar-screenshot">
         <simlar-image :img="heroStage.img"></simlar-image>
       </div>
     </div>
@@ -14,22 +16,18 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
-import SimlarImage from "@/components/core/SimlarImage.vue";
-import SimlarList from "@/components/core/SimlarList.vue";
-import { SimlarListItem } from "@/interfaces/stage-list";
-import { IImage } from "@/interfaces/image";
+import Image from "@/components/core/Image.vue";
+import Cta from "@/components/core/Cta.vue";
+import { IHeroStage } from "@/interfaces/hero-stage";
+
 @Component({
   components: {
-    SimlarImage,
-    SimlarList
+    Cta,
+    SimlarImage: Image
   }
 })
 export default class SimlarHeroStage extends Vue {
-  @Prop() private heroStage!: {
-    headline: string;
-    list: SimlarListItem[];
-    img: IImage;
-  };
+  @Prop() private heroStage!: IHeroStage;
 }
 </script>
 
@@ -44,7 +42,7 @@ export default class SimlarHeroStage extends Vue {
   margin-bottom: 150px;
   justify-content: space-around;
 
-  &-content {
+  &--content {
     flex-grow: 2;
     h3 {
       font-weight: bolder;
@@ -67,7 +65,14 @@ export default class SimlarHeroStage extends Vue {
     }
   }
 
-  &-simlar-screenshot {
+  &--download-app {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 20px 64px 64px 64px;
+    box-sizing: border-box;
+  }
+
+  &--simlar-screenshot {
     flex-grow: 1;
   }
 }

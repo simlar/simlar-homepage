@@ -4,9 +4,15 @@
 
 <script lang="ts">
 import { Vue, Prop, Component } from "vue-property-decorator";
-import { Button as IButton } from "@/interfaces/button";
-@Component
-export default class SimlarButton extends Vue {
+import { IButton } from "@/interfaces/button";
+import Image from "@/components/core/Image.vue";
+
+@Component({
+  components: {
+    SimlarImage: Image
+  }
+})
+export default class Button extends Vue {
   @Prop() private button!: IButton;
 }
 </script>

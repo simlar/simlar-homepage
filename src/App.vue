@@ -8,13 +8,13 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import SimlarHeader from "@/components/SimlarHeader.vue";
-import SimlarFooter from "@/components/SimlarFooter.vue";
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
 
 @Component({
   components: {
-    SimlarHeader,
-    SimlarFooter
+    SimlarHeader: Header,
+    SimlarFooter: Footer
   },
   data() {
     return {

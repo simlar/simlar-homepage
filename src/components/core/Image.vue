@@ -7,11 +7,13 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 import { IImage } from "@/interfaces/image";
 
 @Component
-export default class SimlarImage extends Vue {
+export default class Image extends Vue {
   @Prop() private img!: IImage;
 
   public getAsset(name: string) {
-    return name.endsWith(".svg") ? this.getIconUrl(name) : this.getImageUrl(name);
+    return name.endsWith(".svg")
+      ? this.getIconUrl(name)
+      : this.getImageUrl(name);
   }
 
   public getImageUrl(name: string) {

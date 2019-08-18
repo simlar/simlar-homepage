@@ -12,8 +12,6 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import HeroStage from "@/components/HeroStage.vue";
-import Infobox from "@/components/Infobox.vue";
 import SimlarHeroStage from "@/components/HeroStage.vue";
 import SimlarInfobox from "@/components/Infobox.vue";
 
@@ -30,21 +28,35 @@ import SimlarInfobox from "@/components/Infobox.vue";
           name: "ios-screenshot.png",
           alt: "Simlar Ringing Screenshot"
         },
-        list: [
+        downloads: [
           {
-            name: "ic_android.svg",
-            alt: "Android Source Code",
-            title: "Android"
+            id: "fdroid-download",
+            title: "Download at Fdroid",
+            link: "https://www.simlar.org/fdroid/repo/",
+            img: {
+              name: "ic_fdroid_download.svg",
+              alt: "FDroid download"
+            }
           },
           {
-            name: "ic_apple.svg",
-            alt: "iPhone Source Code",
-            title: "iPhone"
+            id: "play-store-download",
+            title: "Download at playstore",
+            link:
+              "https://play.google.com/store/apps/details?id=org.simlar&hl=en_US",
+            img: {
+              name: "ic_play_store_download.svg",
+              alt: "Play Store download"
+            }
           },
           {
-            name: "ic_apple.svg",
-            alt: "Source Code",
-            title: "Source Code"
+            id: "app-store-download",
+            title: "Download at App Store",
+            link:
+              "https://apps.apple.com/de/app/simlar-sicher-telefonieren/id953945396",
+            img: {
+              name: "ic_app_store_download.svg",
+              alt: "App Store download"
+            }
           }
         ]
       },
@@ -77,6 +89,7 @@ export default class Home extends Vue {}
 </script>
 <style lang="scss" scoped>
 @import "../../src/assets/css/breakpoints";
+
 .home {
   display: flex;
   flex-flow: column;

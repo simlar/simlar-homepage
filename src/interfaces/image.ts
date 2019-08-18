@@ -1,1 +1,4 @@
-export interface IImage { name: string; alt: string; }
+export interface IImage {
+  name: string;
+  alt: string;
+}
