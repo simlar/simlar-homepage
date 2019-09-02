@@ -42,6 +42,11 @@ export default class SimlarHeroStage extends Vue {
   margin-bottom: 150px;
   justify-content: space-around;
 
+  @include touch {
+    flex-flow: column-reverse;
+    margin-bottom: unset;
+  }
+
   &--content {
     flex-grow: 2;
     h3 {

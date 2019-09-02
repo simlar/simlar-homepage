@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="nav">
-      <a href="#">Simlar</a>
+      <a class="simlar-font-logo" href="#">Simlar</a>
       <simlar-image class="header-logo" :img="header.logo"></simlar-image>
       <div class="router-links">
         <router-link to="/">Support</router-link> |
@@ -33,6 +33,8 @@ export default class Header extends Vue {
 </script>
 
 <style scoped lang="scss">
+@import "../assets/css/breakpoints";
+
 #nav {
   display: flex;
   flex-flow: row;
@@ -55,6 +57,20 @@ export default class Header extends Vue {
   position: absolute;
   top: 20px;
   right: calc(50% - 50px);
+
+  @include xs {
+    top: 15px;
+    width: 50px;
+    height: 50px;
+    right: calc(50% - 25px);
+  }
+
+  @include touch {
+    top: 20px;
+    width: 75px;
+    height: 75px;
+    right: calc(50% - 37.5px);
+  }
 }
 
 .vertical-divider {
@@ -64,6 +80,10 @@ export default class Header extends Vue {
   position: absolute;
   top: 85px;
 
+  @include touch {
+    top: 70px;
+  }
+
   hr {
     display: inline-flex;
     width: 100%;
@@ -71,6 +91,31 @@ export default class Header extends Vue {
 
   span {
     width: 250px;
+
+    @include touch {
+      width: 200px;
+    }
+
+  }
+}
+
+.router-links {
+  @include xs {
+    visibility: hidden;
+  }
+
+  @include mobile {
+    visibility: hidden;
+  }
+}
+
+.simlar-font-logo {
+  @include xs {
+    visibility: hidden;
+  }
+
+  @include mobile {
+    visibility: hidden;
   }
 }
 </style>

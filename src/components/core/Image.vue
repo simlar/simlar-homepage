@@ -11,19 +11,12 @@ export default class Image extends Vue {
   @Prop() private img!: IImage;
 
   public getAsset(name: string) {
-    return name.endsWith(".svg")
-      ? this.getIconUrl(name)
-      : this.getImageUrl(name);
-  }
+    const getImageUrl = (name: string) =>
+      require.context("@/assets/images/", false, /\.png$/)(`./${name}`);
+    const getIconUrl = (name: string) =>
+      require.context("@/assets/icons/", false, /\.svg$/)(`./${name}`);
 
-  public getImageUrl(name: string) {
-    const image = require.context("@/assets/images/", false, /\.png$/);
-    return image("./" + name);
-  }
-
-  public getIconUrl(name: string) {
-    const icon = require.context("@/assets/icons/", false, /\.svg$/);
-    return icon(`./${name}`);
+    return name.endsWith(".svg") ? getIconUrl(name) : getImageUrl(name);
   }
 }
 </script>
