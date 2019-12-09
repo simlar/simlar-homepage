@@ -38,6 +38,14 @@
     "typescript": "^3.5.3",
     "vue-template-compiler": "^2.6.10"
   },
+  "renovate": {
+    "extends": [
+      "config:base"
+    ],
+    "reviwers": [
+      "mehrad-rafigh"
+    ]
+  },  
   "hooks": {
     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
   },
