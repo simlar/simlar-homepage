@@ -42,7 +42,7 @@
     "extends": [
       "config:base"
     ],
-    "reviwers": [
+    "reviewers": [
       "mehrad-rafigh"
     ]
   },  
