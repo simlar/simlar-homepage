@@ -30,7 +30,7 @@
     "commitizen": "4.2.1",
     "cz-conventional-changelog": "3.0.2",
     "husky": "4.3.0",
-    "lodash": "4.17.20",
+    "lodash": "4.17.21",
     "node-sass": "4.13.1",
     "prettier": "2.1.2",
     "sass-loader": "7.1.0",
