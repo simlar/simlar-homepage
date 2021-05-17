@@ -31,7 +31,7 @@
     "cz-conventional-changelog": "3.0.2",
     "husky": "4.3.8",
     "lodash": "4.17.21",
-    "node-sass": "4.13.1",
+    "node-sass": "6.0.0",
     "prettier": "2.1.2",
     "sass-loader": "7.1.0",
     "ts-jest": "24.0.2",
